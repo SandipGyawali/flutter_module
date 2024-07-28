@@ -80,3 +80,10 @@ Additional Resources
 Official Flutter Documentation: Flutter.dev
 YouTube Tutorials: Channels like The Net Ninja, Academind, and Flutter Dev.
 MVVM with Repo: [https://github.com/hamidhosen42/Flutter-MVVM-Architecture-with-Rest-APIs-using-Provider, https://github.com/khyhim/mvvm-provider/tree/main/mvvmprovider]
+
+#Note
+Design Template:
+
+https://www.figma.com/design/LAXMktBUSCZHAE57LCUeGS/(Preview-Only)---Rental-Car-Mobile-App-Design-(Community)?node-id=302-2&t=kYPZ9VVt97sIzkDE-0
+
+https://www.figma.com/design/EyDrx4ZSf8p5Cd4xt4tnCv/Coffee-Shop-Mobile-App-Design-(Community)?node-id=0-1&t=7ZwYPpLSmK8TMwYO-0
