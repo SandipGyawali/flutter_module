@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:hugeicons/hugeicons.dart';
 
 class InputField extends StatelessWidget {
-  final String placeholder;
   final String label;
   final bool obscure;
   final String hintText;
   final TextEditingController controller;
+  final HugeIcon? suffixIcon;
+  final onInputSubmit;
 
   @override
-  const InputField(
-      {super.key,
-      required this.placeholder,
-      required this.label,
-      required this.obscure,
-      required this.hintText,
-      required this.controller});
+  const InputField({
+    super.key,
+    required this.label,
+    required this.obscure,
+    required this.hintText,
+    required this.controller,
+    this.suffixIcon,
+    this.onInputSubmit,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +35,12 @@ class InputField extends StatelessWidget {
         ),
         const SizedBox(height: 5),
         TextField(
+          onSubmitted: (value) {
+            onInputSubmit();
+          },
+          textInputAction: TextInputAction.search,
+          textAlign: TextAlign.start,
+          textAlignVertical: TextAlignVertical.center,
           controller: controller,
           obscureText: obscure,
           decoration: InputDecoration(

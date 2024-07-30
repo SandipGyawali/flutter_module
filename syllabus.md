@@ -68,7 +68,7 @@
 13. Deploying the App
 
 - Build APK and IPA: Create release versions for Android and iOS.
-- Publishing: Publish the app to Google Play Store and Apple App Store.
+<!-- - Publishing: Publish the app to Google Play Store and Apple App Store. -->
 
 Practical Tasks and Mini-Projects
 

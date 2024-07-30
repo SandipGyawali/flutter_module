@@ -16,6 +16,7 @@ dependencies:
     sdk: flutter
   flutter_dotenv: ^5.1.0
   go_router: ^14.2.1
+  hugeicons: ^0.0.7
   provider: ^6.1.2
   shared_preferences: ^2.2.3
   sqflite: ^2.3.3+1
@@ -29,5 +30,5 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section here..
   assets:
-    - assets/auth_sample.jpg
+    - assets/
     - .env
