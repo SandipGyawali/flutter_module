@@ -69,7 +69,6 @@ class _Register extends State<RegisterPage> {
                 child: Column(
                   children: <Widget>[
                     InputField(
-                      placeholder: "Enter name",
                       label: "Username",
                       obscure: false,
                       hintText: "Enter Username",
@@ -77,7 +76,6 @@ class _Register extends State<RegisterPage> {
                     ),
                     const SizedBox(height: 20),
                     InputField(
-                      placeholder: "Enter Email",
                       label: "Email",
                       obscure: false,
                       hintText: "Enter Email",
@@ -85,7 +83,6 @@ class _Register extends State<RegisterPage> {
                     ),
                     const SizedBox(height: 20),
                     InputField(
-                      placeholder: "Enter Password",
                       label: "Password",
                       obscure: true,
                       hintText: "Enter Password",

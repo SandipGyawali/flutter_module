@@ -68,7 +68,6 @@ class _LoginPage extends State<LoginPage> {
                 child: Column(
                   children: <Widget>[
                     InputField(
-                      placeholder: "Enter Email",
                       label: "Email",
                       obscure: false,
                       hintText: "Enter Email",
@@ -76,7 +75,6 @@ class _LoginPage extends State<LoginPage> {
                     ),
                     const SizedBox(height: 20),
                     InputField(
-                      placeholder: "Enter Password",
                       label: "Password",
                       obscure: true,
                       hintText: "Enter Password",
