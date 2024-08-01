@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_m/components/employee_form.dart';
 import 'package:flutter_m/pages/home.dart';
 import 'package:flutter_m/pages/layout.dart';
 import 'package:flutter_m/pages/login.dart';
@@ -7,6 +8,7 @@ import 'package:flutter_m/pages/base.dart';
 import 'package:flutter_m/pages/sandbox.dart';
 import 'package:flutter_m/pages/selected_news.dart';
 import 'package:flutter_m/pages/sliver.dart';
+import 'package:flutter_m/pages/test_page.dart';
 import 'package:flutter_m/routes/route_consts.dart';
 import 'package:go_router/go_router.dart';
 
@@ -76,7 +78,21 @@ class MyAppRouter {
         pageBuilder: (context, state) {
           return const MaterialPage(child: SelectedNewsScreen());
         },
-      )
+      ),
+      GoRoute(
+        name: MyAppRouteConstants.testRoute,
+        path: "/testRoute",
+        pageBuilder: (context, state) {
+          return const MaterialPage(child: TestPage());
+        },
+      ),
+      GoRoute(
+        name: MyAppRouteConstants.employeeForm,
+        path: "/employeeForm",
+        pageBuilder: (context, state) {
+          return const MaterialPage(child: EmployeeForm());
+        },
+      ),
     ],
   );
 }

@@ -9,4 +9,6 @@ class MyAppRouteConstants {
   static const String sandbox = "sandbox";
   static const String photos = "photos";
   static const String selectedNews = "selectedNews";
+  static const String testRoute = "testRoute";
+  static const String employeeForm = "employeeForm";
 }
