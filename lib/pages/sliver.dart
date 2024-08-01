@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class SliverPage extends StatefulWidget {
   @override
@@ -18,7 +17,7 @@ class _SliverPage extends State<SliverPage> {
         slivers: [
           SliverAppBar(
             backgroundColor: Colors.deepOrange,
-            leading: Icon(Icons.menu),
+            leading: const Icon(Icons.menu),
             expandedHeight: 350,
             floating: true,
             pinned: true,
@@ -33,7 +32,7 @@ class _SliverPage extends State<SliverPage> {
           ),
           SliverToBoxAdapter(
             child: Padding(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Container(
                 height: 250,
                 width: double.infinity,
@@ -46,7 +45,7 @@ class _SliverPage extends State<SliverPage> {
           ),
           SliverToBoxAdapter(
             child: Padding(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Container(
                 height: 250,
                 width: double.infinity,
@@ -59,7 +58,7 @@ class _SliverPage extends State<SliverPage> {
           ),
           SliverToBoxAdapter(
             child: Padding(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Container(
                 height: 250,
                 width: double.infinity,

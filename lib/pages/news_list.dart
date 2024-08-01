@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_m/components/input_field.dart';
 import 'package:flutter_m/model/news_list_model.dart';
 import 'package:flutter_m/provider/news_provider.dart';
-import 'package:flutter_m/routes/route_consts.dart';
-import 'package:go_router/go_router.dart';
 import 'package:hugeicons/hugeicons.dart';
 import 'package:provider/provider.dart';
 

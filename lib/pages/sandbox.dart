@@ -58,12 +58,12 @@ class _SandboxState extends State<Sandbox> {
                 child: const Text("Animate Opacity"),
               ),
               AnimatedOpacity(
+                duration: const Duration(seconds: 2),
                 opacity: _opacity,
-                child: Text(
+                child: const Text(
                   "Hide Me",
                   style: TextStyle(color: Colors.white),
                 ),
-                duration: Duration(seconds: 2),
               )
             ],
           ),

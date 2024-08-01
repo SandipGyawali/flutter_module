@@ -72,7 +72,7 @@ class _BaseScreenState extends State<BaseScreen> {
                           label: "Login",
                           buttonBgColor: Colors.white,
                           onPressed: () {
-                            context.goNamed(MyAppRouteConstants.loginRoute);
+                            context.pushNamed(MyAppRouteConstants.loginRoute);
                           },
                         ),
                         const SizedBox(height: 10),
@@ -80,7 +80,8 @@ class _BaseScreenState extends State<BaseScreen> {
                           label: "Sign up",
                           buttonBgColor: Colors.yellow,
                           onPressed: () {
-                            context.goNamed(MyAppRouteConstants.registerRoute);
+                            context
+                                .pushNamed(MyAppRouteConstants.registerRoute);
                           },
                         ),
                       ],
