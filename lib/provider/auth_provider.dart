@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_m/auth.dart';
@@ -21,7 +22,8 @@ class AuthProvider with ChangeNotifier {
         password: password,
       );
 
-      GoRouter.of(context).pushReplacementNamed(MyAppRouteConstants.homeRoute);
+      GoRouter.of(context)
+          .pushReplacementNamed(MyAppRouteConstants.layoutRoute);
       Utils.flushBarMessage(
         "Login Successful",
         context,
@@ -64,7 +66,8 @@ class AuthProvider with ChangeNotifier {
 
       await FirebaseAuth.instance.currentUser!.updateDisplayName(name);
       await FirestoreServices.saveUser(name, email, userCredential.user!.uid);
-      GoRouter.of(context).pushReplacementNamed(MyAppRouteConstants.homeRoute);
+      GoRouter.of(context)
+          .pushReplacementNamed(MyAppRouteConstants.layoutRoute);
       Utils.flushBarMessage("Signup successful", context, STATUS.SUCCESS);
     } on FirebaseAuthException catch (err) {
       if (err.code == "weak-password") {
@@ -80,6 +83,91 @@ class AuthProvider with ChangeNotifier {
           STATUS.ERROR,
         );
       }
+    } catch (err) {
+      Utils.flushBarMessage(
+        err.toString(),
+        context,
+        STATUS.ERROR,
+      );
+    }
+  }
+
+  signOut(BuildContext context) async {
+    try {
+      User? user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        // remove fire-store data associated with the user.
+        await FirestoreServices.deleteUser(user.uid);
+      }
+
+      await auth.signOut();
+      GoRouter.of(context).pushReplacementNamed(MyAppRouteConstants.baseRoute);
+      Utils.flushBarMessage(
+        "Signout successful",
+        context,
+        STATUS.SUCCESS,
+      );
+    } catch (err) {
+      Utils.flushBarMessage(
+        err.toString(),
+        context,
+        STATUS.ERROR,
+      );
+    }
+  }
+
+  // add employee to the firestore
+  Future addEmployeeDetails(Map<String, dynamic> employeeInfoMap, String id,
+      BuildContext context) async {
+    try {
+      final data = await auth.addEmployeeDetails(employeeInfoMap, id);
+      Utils.flushBarMessage(
+        "Employee added successfully",
+        context,
+        STATUS.SUCCESS,
+      );
+
+      return data;
+    } catch (err) {
+      Utils.flushBarMessage(
+        err.toString(),
+        context,
+        STATUS.ERROR,
+      );
+    }
+  }
+
+  Future updateEmployeeDetail(
+    Map<String, dynamic> updateInfo,
+    String id,
+    BuildContext context,
+  ) async {
+    try {
+      await auth.updateEmployeeDetail(updateInfo, id);
+
+      Utils.flushBarMessage(
+        "Data updated Successfully",
+        context,
+        STATUS.SUCCESS,
+      );
+    } catch (err) {
+      Utils.flushBarMessage(
+        err.toString(),
+        context,
+        STATUS.ERROR,
+      );
+    }
+  }
+
+  Future deleteEmployeeDetail(String id, BuildContext context) async {
+    try {
+      await auth.deleteEmployeeDetail(id);
+
+      Utils.flushBarMessage(
+        "Deleted Successfully",
+        context,
+        STATUS.SUCCESS,
+      );
     } catch (err) {
       Utils.flushBarMessage(
         err.toString(),
