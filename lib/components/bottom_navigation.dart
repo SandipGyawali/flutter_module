@@ -58,37 +58,29 @@ class BottomNavigation extends StatelessWidget {
               ),
               label: "Home",
             ),
-            const BottomNavigationBarItem(
+            BottomNavigationBarItem(
               icon: HugeIcon(
                 icon: HugeIcons.strokeRoundedScroll,
-                color: Colors.black,
+                color: selectedIndex == 1 ? selectedColor : unselectedColor,
                 size: 24.0,
               ),
               label: "Sliver",
             ),
             BottomNavigationBarItem(
               icon: HugeIcon(
-                icon: HugeIcons.strokeRoundedSunCloud02,
-                color: selectedIndex == 2 ? selectedColor : unselectedColor,
-                size: 24.0,
-              ),
-              label: "Weather",
-            ),
-            const BottomNavigationBarItem(
-              icon: HugeIcon(
                 icon: HugeIcons.strokeRoundedNews,
-                color: Colors.black,
+                color: selectedIndex == 2 ? selectedColor : unselectedColor,
                 size: 24.0,
               ),
               label: "News",
             ),
             BottomNavigationBarItem(
               icon: HugeIcon(
-                icon: HugeIcons.strokeRoundedUser,
+                icon: HugeIcons.strokeRoundedTestTube01,
                 color: selectedIndex == 3 ? selectedColor : unselectedColor,
-                size: iconSize,
+                size: 24.0,
               ),
-              label: "Profile",
+              label: "Test",
             ),
           ],
         ),

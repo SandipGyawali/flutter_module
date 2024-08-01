@@ -18,6 +18,7 @@ dependencies:
   go_router: ^14.2.1
   hugeicons: ^0.0.7
   provider: ^6.1.2
+  random_string: ^2.3.1
   shared_preferences: ^2.2.3
   sqflite: ^2.3.3+1
 
