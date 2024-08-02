@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_m/components/app_bar.dart';
 import 'package:flutter_m/components/bottom_navigation.dart';
 import 'package:flutter_m/components/drawer.dart';
+import 'package:flutter_m/pages/book.dart';
 import 'package:flutter_m/pages/home.dart';
 import 'package:flutter_m/pages/news_list.dart';
 import 'package:flutter_m/pages/photos.dart';
@@ -22,6 +23,7 @@ class _LayoutPage extends State<LayoutPage> {
   // page list.
   final List<Widget> _pages = [
     const HomePage(),
+    const BookPage(),
     const PhotoScreen(),
     const NewsListScreen(),
     const TestPage()
@@ -40,7 +42,7 @@ class _LayoutPage extends State<LayoutPage> {
 
     return Scaffold(
       key: _key,
-      backgroundColor: Colors.grey.shade200,
+      backgroundColor: Colors.grey.shade100,
       drawer: const DrawerWidget(),
       appBar: AppBarWidget(key_: _key),
       body: SafeArea(child: _pages[_selectedIndex]),
