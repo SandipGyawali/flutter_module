@@ -60,8 +60,16 @@ class BottomNavigation extends StatelessWidget {
             ),
             BottomNavigationBarItem(
               icon: HugeIcon(
-                icon: HugeIcons.strokeRoundedScroll,
+                icon: HugeIcons.strokeRoundedBook02,
                 color: selectedIndex == 1 ? selectedColor : unselectedColor,
+                size: 24.0,
+              ),
+              label: "Book",
+            ),
+            BottomNavigationBarItem(
+              icon: HugeIcon(
+                icon: HugeIcons.strokeRoundedScroll,
+                color: selectedIndex == 2 ? selectedColor : unselectedColor,
                 size: 24.0,
               ),
               label: "Sliver",
@@ -69,7 +77,7 @@ class BottomNavigation extends StatelessWidget {
             BottomNavigationBarItem(
               icon: HugeIcon(
                 icon: HugeIcons.strokeRoundedNews,
-                color: selectedIndex == 2 ? selectedColor : unselectedColor,
+                color: selectedIndex == 3 ? selectedColor : unselectedColor,
                 size: 24.0,
               ),
               label: "News",
@@ -77,7 +85,7 @@ class BottomNavigation extends StatelessWidget {
             BottomNavigationBarItem(
               icon: HugeIcon(
                 icon: HugeIcons.strokeRoundedTestTube01,
-                color: selectedIndex == 3 ? selectedColor : unselectedColor,
+                color: selectedIndex == 4 ? selectedColor : unselectedColor,
                 size: 24.0,
               ),
               label: "Test",
