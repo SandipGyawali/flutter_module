@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_m/components/employee_form.dart';
+import 'package:flutter_m/model/book_model.dart';
 import 'package:flutter_m/pages/home.dart';
+import 'package:flutter_m/pages/individual_book_page.dart';
 import 'package:flutter_m/pages/layout.dart';
 import 'package:flutter_m/pages/login.dart';
 import 'package:flutter_m/pages/register.dart';
@@ -91,6 +93,14 @@ class MyAppRouter {
         path: "/employeeForm",
         pageBuilder: (context, state) {
           return const MaterialPage(child: EmployeeForm());
+        },
+      ),
+      GoRoute(
+        name: MyAppRouteConstants.bookRoute,
+        path: "/bookRoute",
+        pageBuilder: (context, state) {
+          var extra = state.extra as BookModel;
+          return MaterialPage(child: IndividualBookPage(bookDetail: extra));
         },
       ),
     ],

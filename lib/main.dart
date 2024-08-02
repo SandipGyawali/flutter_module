@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_m/provider/auth_provider.dart';
+import 'package:flutter_m/provider/book_provider.dart';
 import 'package:flutter_m/provider/news_provider.dart';
 import 'package:flutter_m/provider/photo_list_provider.dart';
 import 'package:flutter_m/routes/route_config.dart';
@@ -15,7 +16,8 @@ void main() async {
     providers: [
       ChangeNotifierProvider(create: (_) => AuthProvider()),
       ChangeNotifierProvider(create: (_) => PhotoListProvider()),
-      ChangeNotifierProvider(create: (_) => NewsProvider())
+      ChangeNotifierProvider(create: (_) => NewsProvider()),
+      ChangeNotifierProvider(create: (_) => BookProvider())
     ],
     child: MyApp(),
   ));
@@ -31,6 +33,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: MaterialApp.router(
         routerConfig: _router,
+        theme: ThemeData(
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.white,
+            surfaceTintColor: Colors.white,
+          ),
+        ),
         title: "Flutter Module",
         debugShowCheckedModeBanner: false,
       ),
