@@ -97,7 +97,7 @@ class _NewsListScreenState extends State<NewsListScreen> {
                 ? const Center(
                     child: Column(
                     children: [
-                      SizedBox(height: 100),
+                      SizedBox(height: 150),
                       CircularProgressIndicator()
                     ],
                   ))
