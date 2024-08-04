@@ -44,6 +44,12 @@ class _TestPage extends State<TestPage> {
           },
           child: const Text("Animations"),
         ),
+        ElevatedButton(
+          onPressed: () {
+            GoRouter.of(context).pushNamed(MyAppRouteConstants.sqfliteRoute);
+          },
+          child: const Text("Sqflite Demo"),
+        ),
       ],
     );
   }

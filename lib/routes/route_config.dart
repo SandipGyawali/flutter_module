@@ -10,6 +10,7 @@ import 'package:flutter_m/pages/base.dart';
 import 'package:flutter_m/pages/sandbox.dart';
 import 'package:flutter_m/pages/selected_news.dart';
 import 'package:flutter_m/pages/sliver.dart';
+import 'package:flutter_m/pages/sqflite/lite_home.dart';
 import 'package:flutter_m/pages/test_page.dart';
 import 'package:flutter_m/routes/route_consts.dart';
 import 'package:go_router/go_router.dart';
@@ -103,6 +104,13 @@ class MyAppRouter {
           return MaterialPage(child: IndividualBookPage(bookDetail: extra));
         },
       ),
+      GoRoute(
+        name: MyAppRouteConstants.sqfliteRoute,
+        path: "/sqfliteRoute",
+        pageBuilder: (context, state) {
+          return const MaterialPage(child: LiteHome());
+        },
+      )
     ],
   );
 }

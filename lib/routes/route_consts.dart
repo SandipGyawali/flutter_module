@@ -12,4 +12,5 @@ class MyAppRouteConstants {
   static const String testRoute = "testRoute";
   static const String employeeForm = "employeeForm";
   static const String bookRoute = "bookRoute";
+  static const String sqfliteRoute = "sqfliteRoute";
 }
